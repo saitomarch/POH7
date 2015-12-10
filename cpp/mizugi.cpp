@@ -3,7 +3,7 @@
 #include <cstdlib>
 using namespace std;
 
-string getstring() {
+string readline() {
     string str;
     getline(cin, str);
     return str;
@@ -25,7 +25,7 @@ template<typename T> T factorial(T n) {
 }
 
 int main(void) {
-    uint64_t inputNum = stoll(getstring());
+    uint64_t inputNum = stoll(readline());
     auto str = to_string(factorial(inputNum));
     const auto limit = 9;
     const auto zeroch = '0';
