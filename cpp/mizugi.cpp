@@ -1,4 +1,4 @@
-nclude <iostream>
+#include <iostream>
 #include <string>
 #include <cstdlib>
 using namespace std;
