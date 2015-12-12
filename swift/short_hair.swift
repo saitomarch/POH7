@@ -3,5 +3,5 @@ var val = 0
 for (var cnt = 0; cnt < times; cnt++) {
     val += Int(readLine()!)!
 }
-print(val);
+print(val)
 
