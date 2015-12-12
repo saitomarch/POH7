@@ -1,5 +1,5 @@
 func p(t:Int)->[[String]]{var a=[[String]]()
-for (var i=0;i<t;i++){a.append(readLine()!.characters.split{$0==" "}.map(String.init))}
+for(var i=0;i<t;i++){a.append(readLine()!.characters.split{$0==" "}.map(String.init))}
 return a}
 let s=Int(readLine()!)!
 let m=p(s)
