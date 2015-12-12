@@ -4,12 +4,12 @@ using namespace std;
 int main(void){
     string str;
     getline(cin, str);
-    int num = stoi(str);
-    int answer = num;
-    for (int cnt = 1; cnt < num; cnt++) {
-        answer *= num - cnt;
+    int times = stoi(str);
+    int num = times;
+    for (int cnt = 1; cnt < times; cnt++) {
+        num *= times - cnt;
     }
-    cout << answer << endl;
+    cout << num << endl;
     return EXIT_SUCCESS;
 }
 

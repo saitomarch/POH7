@@ -11,7 +11,7 @@ int main(void){
     int times = stoi(readline());
     string str = "";
     for (int cnt = 0; cnt < times; cnt++) {
-        if (cnt > 0) {
+        if (!str.empty()) {
             str += "_";
         }
         str += readline();

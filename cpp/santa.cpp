@@ -19,12 +19,12 @@ vector<string> split(const string &str, char sep) {
     return vec;
 }
 int main() {
-    auto cmd_arr = split(readline(), ' ');
+    auto cake_arr = split(readline(), ' ');
     
-    const auto x = stoi(cmd_arr[0]);
-    const auto y = stoi(cmd_arr[1]);
-    const auto z = stoi(cmd_arr[2]);
-    const auto n = stoi(cmd_arr[3]);
+    const auto x = stoi(cake_arr[0]);
+    const auto y = stoi(cake_arr[1]);
+    const auto z = stoi(cake_arr[2]);
+    const auto n = stoi(cake_arr[3]);
     
     vector<int> cut_x, cut_y;
     
