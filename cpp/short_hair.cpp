@@ -2,21 +2,15 @@
 #include <string>
 #include <cstdlib>
 using namespace std;
-string readline() {
-    string str;
-    getline(cin, str);
-    return str;
-}
 int main(void){
-    int times = stoi(readline());
-    string str = "";
+    const auto times = 2;
+    int num = 0;
     for (int cnt = 0; cnt < times; cnt++) {
-        if (cnt > 0) {
-            str += "_";
-        }
-        str += readline();
+        string str;
+        getline(cin, str);
+        num += stoi(str);
     }
-    cout << str << endl;
+    cout << num << endl;
     return EXIT_SUCCESS;
 }
 
