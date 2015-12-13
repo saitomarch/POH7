@@ -19,47 +19,46 @@ vector<string> split(const string &str, char sep) {
     return vec;
 }
 
+std::vector<std::vector<int>> prepare(int size) {
+    std::vector<std::vector<int>> vec;
+    for (int cnt = 0; cnt < size; cnt++) {
+        std::vector<int> line;
+        auto arr = split(readline(), ' ');
+        for (int idx = 0; idx < size; idx++) {
+            line.push_back(stoi(arr[idx]));
+        }
+        vec.push_back(line);
+    }
+    return vec;
+}
+
 int main(void){
-    const auto mapSize = stoi(readline());
-    int map[mapSize][mapSize];
-    
-    for (int cnt = 0; cnt < mapSize; cnt++) {
-        auto arr = split(readline(), ' ');
-        for (int idx = 0; idx < mapSize; idx++) {
-            map[cnt][idx] = stoi(arr[idx]);
-        }
-    }
-    
-    const auto patSize = stoi(readline());
-    int pat[patSize][patSize];
-    for (int cnt = 0; cnt < patSize; cnt++) {
-        auto arr = split(readline(), ' ');
-        for (int idx = 0; idx < patSize; idx++) {
-            pat[cnt][idx] = stoi(arr[idx]);
-        }
-    }
+    const auto s1 = stoi(readline());
+    auto m1 = prepare(s1);
+    const auto s2 = stoi(readline());
+    auto m2 = prepare(s2);
     
     int x = 0, y = 0;
     bool finished = false;
-    for (int idx = 0; idx <= mapSize - patSize && !finished; idx++) {
-        for (int idy = 0; idy <= mapSize - patSize && !finished; idy++) {
+    for (int x1 = 0; x1 <= s1 - s2 && !finished; x1++) {
+        for (int y1 = 0; y1 <= s1 - s2 && !finished; y1++) {
             bool matches = true;
-            for (int tmp_x = 0; tmp_x < patSize && matches; tmp_x++) {
-                for (int tmp_y = 0; tmp_y < patSize && matches; tmp_y++) {
-                    if (map[idx + tmp_x][idy + tmp_y] != pat[tmp_x][tmp_y]) {
+            for (int x2 = 0; x2 < s2 && matches; x2++) {
+                for (int y2 = 0; y2 < s2 && matches; y2++) {
+                    if (m1[x1 + x2][y1 + y2] != m2[x2][y2]) {
                         matches = false;
                     }
                 }
             }
             if (matches) {
-                x = idx;
-                y = idy;
+                x = x1;
+                y = y1;
                 finished = true;
             }
         }
     }
-    
     cout << x << " " << y << endl;
+    
     return EXIT_SUCCESS;
 }
 
