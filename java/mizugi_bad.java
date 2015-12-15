@@ -6,7 +6,7 @@ public class Main {
     public static BigInteger factorial(BigInteger bigint) {
         BigInteger result = new BigInteger("1");
         for (BigInteger k = new BigInteger("1"); k.compareTo(bigint) <= 0; k = k.add(new BigInteger("1"))) {
-            rslt = result.multiply(k);
+            result = result.multiply(k);
         }
         return result;
     }
