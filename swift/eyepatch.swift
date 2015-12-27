@@ -9,6 +9,7 @@ for (sell) in sellList {
     for (have) in haveList {
         if (sell == have) {
             matches = true
+            break
         }
     }
     if (!matches) {
