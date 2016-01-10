@@ -4,5 +4,5 @@
     for ($cnt = 0; $cnt < TIMES; $cnt++) {
         $num += (int)fgets(STDIN);
     }
-    echo $num;
+    echo $num . "\n";
 ?>

@@ -29,5 +29,5 @@
         $str .= $should_buy;
     }
 
-    echo $str !== "" ? $str : "None";
+    echo $str !== "" ? $str : "None" . "\n";
 ?>

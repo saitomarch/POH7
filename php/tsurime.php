@@ -4,5 +4,5 @@
     for ($cnt = 0; $cnt < $times; $cnt++) {
         $str .= "Ann";
     }
-    echo $str;
+    echo $str . "\n";
 ?>
